@@ -9,13 +9,14 @@ The conversion is straightforward if the model does not employ any custom layers
 **Example: Convert resnet-50 models**
 
 Source models: Pre-trained on ImageNet
-Compile command (Jupyter Notebook)
+
+Compile command (Jupyter Notebook):
 
 ```
 !mo_tf.py --input_shape=[16,224,224,3] --mean_values=[123.8,116.78,103.94] --input=map/TensorArrayStack/TensorArrayGatherV3 --input_model=resnet_v1-50.pb --reverse_input_channels --data_type=FP16
 ```
 
-Download models: [Source]() [IR]()
+Download models: [Source]() or [IR]()
 
 ## Tensorflow Object Detection models
 
@@ -26,7 +27,8 @@ The back-bone of the graph are keep, while the pre-processor are removed and the
 **Example: Convert SSD Mobilenet v2 models**
 
 Source models: Pre-trained on DOTA dataset with object detection API
-Conversion command: (Jupyter Notebook)
+
+Conversion command: (Jupyter Notebook):
 
 ```
 pipeline = 'deploy/tf_model/DOTA/ssd_mobilenet_v2_pipeline.config'
@@ -36,7 +38,7 @@ custom_ops_config = 'deploy/tf_model/DOTA/ssd_v2_support.json'
 !mo_tf.py --input_model $graph --tensorflow_use_custom_operations_config $custom_ops_config --tensorflow_object_detection_api_pipeline_config $pipeline --batch 1 --reverse_input_channels --data_type=$dtype
 ```
 
-Download models: [Source](https://drive.google.com/drive/u/0/folders/19JQdsr2iSQbOR2sbvzol0FSnKI9DhxrU) [IR](https://drive.google.com/drive/u/0/folders/1Ni7DpIwfJK7kUibE2hQuIrJMG0rX68Ry)
+Download models: [Source](https://drive.google.com/drive/u/0/folders/19JQdsr2iSQbOR2sbvzol0FSnKI9DhxrU) or [IR](https://drive.google.com/drive/u/0/folders/1Ni7DpIwfJK7kUibE2hQuIrJMG0rX68Ry)
 
 ### Faster-RCNN models with TF object detection
 
@@ -45,7 +47,8 @@ Similar to SSD, the pre-processor blocks are removed. In addition, OpenVino will
 **Example: Faster RCNN Resnet50 models**
 
 Source models: Pre-trained on DOTA dataset with object detection API
-Conversion command: (Jupyter Notebook)
+
+Conversion command: (Jupyter Notebook):
 
 ```
 pipeline = 'deploy/tf_model/DOTA/faster_rcnn_resnet50_pipeline.config'
@@ -55,4 +58,4 @@ custom_ops_config = 'deploy/tf_model/DOTA/faster_rcnn_support.json'
 !mo_tf.py --input_model $graph --tensorflow_use_custom_operations_config $custom_ops_config --tensorflow_object_detection_api_pipeline_config $pipeline --batch 1 --reverse_input_channels --data_type=$dtype
 ```
 
-Download models: [Source](https://drive.google.com/drive/u/0/folders/19JQdsr2iSQbOR2sbvzol0FSnKI9DhxrU) [IR](https://drive.google.com/drive/u/0/folders/1Ni7DpIwfJK7kUibE2hQuIrJMG0rX68Ry)
+Download models: [Source](https://drive.google.com/drive/u/0/folders/19JQdsr2iSQbOR2sbvzol0FSnKI9DhxrU) or [IR](https://drive.google.com/drive/u/0/folders/1Ni7DpIwfJK7kUibE2hQuIrJMG0rX68Ry)
