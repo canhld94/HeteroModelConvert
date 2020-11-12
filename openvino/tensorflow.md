@@ -16,7 +16,7 @@ Compile command (Jupyter Notebook):
 !mo_tf.py --input_shape=[16,224,224,3] --mean_values=[123.8,116.78,103.94] --input=map/TensorArrayStack/TensorArrayGatherV3 --input_model=resnet_v1-50.pb --reverse_input_channels --data_type=FP16
 ```
 
-Download models: [Source]() or [IR]()
+Download models: [Source](https://drive.google.com/drive/u/0/folders/1r7i_FX3ILdwZaBeZZH26ekUSNlzuCpOx) or [IR](https://drive.google.com/drive/u/0/folders/1aHlhZgq6GHltVizsTrvnCbZihp4ygyAL)
 
 ## Tensorflow Object Detection models
 
