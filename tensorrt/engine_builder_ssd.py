@@ -15,8 +15,8 @@ import graphsurgeon as gs
 import tensorflow as tf
 
 
-TF_DIR_NAME = "/home/canhld/workplace/InferenceServer/deploy/tf_model/COCO/"
-UFF_DIR_NAME = "/home/canhld/workplace/InferenceServer/deploy/tensorrt_model/DOTA/"
+TF_DIR_NAME = "../../deploy/tf_model/COCO/"
+UFF_DIR_NAME = "../../deploy/tensorrt_model/DOTA/"
 MODEL_SPECS = {
     'ssdlite_mobilenet_v2': {
         'input_pb':   os.path.abspath(os.path.join(
